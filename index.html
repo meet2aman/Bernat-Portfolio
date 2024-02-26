@@ -9,10 +9,14 @@
       href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
-    <main class="w-100% h-100%">
+    <main>
       <nav
         class="fixed z-30 flex justify-end items-center w-full text-white bg-transparent px-20 py-10 gap-2"
       >
@@ -50,7 +54,7 @@
         class="md:h-[800px] w-full object-cover overflow-hidden max-sm:w-[878px]"
       >
         <img
-          class="w-100%"
+         class="w-100% object-cover"
           src="https://assets-global.website-files.com/64589fb989b2b33c593db89d/6458a6db645ec6a527000cfa_home-hero.webp"
           alt="img"
         />
@@ -68,9 +72,11 @@
         <div
           class="about-right md:w-40% max-sm:w-full flex flex-col justify-between items-start md:border-l-2 border-black md:pl-[50px]"
         >
-          <h2 class="text-[80px] block md:text-[30px] md:font-semibold">
-            (About Me)
-          </h2>
+          <a href="./about/about.html">
+            <h2 class="text-[80px] block md:text-[30px] md:font-semibold">
+              (About Me)
+            </h2>
+          </a>
           <div
             class="flex justify-center items-center max-sm:text-6xl text-3xl gap-4 max-sm:p-2 text-white"
           >
@@ -177,9 +183,12 @@
       </div>
 
       <div
+        data-scroll-container
         class="md:h-[1000px] max-sm:w-[878px] -z-30 w-full object-cover overflow-hidden"
       >
         <img
+          data-scroll
+          data-scroll-speed="1.5"
           class="w-100%"
           src="https://assets-global.website-files.com/64589fb989b2b3e8783db8c8/645cad0d8364135d4087b9c8_project-01.webp"
           alt="img"
@@ -433,5 +442,7 @@
         </h2>
       </div>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+    <script src="./main.js"></script>
   </body>
 </html>
